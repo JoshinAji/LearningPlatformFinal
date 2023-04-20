@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Front Page</title>
+  <link rel="stylesheet" type="text/css" href="../CSS Files/navbar.css">
+  <link rel="stylesheet" type="text/css" href="../CSS Files/banner.css">
+  <link rel="stylesheet" type="text/css" href="../CSS Files/bottom-banner.css">
+  <link rel="stylesheet" type="text/css" href="../CSS Files/student_registration.css">
+  <script src="student_validation.js"></script>
+  <script src="../CSS Files/singinvalidation.js"></script>
+
+</head>
+<body>
+  <section class="banner">
+    <h1>Xavier Care Home: Learning Platform</h1>
+    <p style="font-style: italic;">"Its not how much we give but how much love we put into giving" </p>
+    <p style="font-weight: bold;">-Mother Teresea</p>
+  </section>
+
+  <nav>
+    <div class="navbar">
+      <li><a href="Index.html">Home</a></li>
+      <li><a href="AboutPage.html">About</a></li>
+      <!-- <a href="#news">News</a> -->
+    <!--  -->
+    <div class="login-button">
+      <li id="First"><a href="StudentLogin.html">Student Login</a></li>
+      <!-- <li id="Second"><a href="AdminLogin.html">Admin Login</a></li> -->
+    </div>
+  </div>
+  </nav>
+
+  
+    <h2><center>Student Login</center> </h2>
+    <p><center>Please enter the username and the password</center></p>
+    <div class="student-detail" >
+      <form action="./Dashboard.html" method="GET" class="regform" onsubmit="return User1()">
+
+        <label for="uname">Username</label>
+        <input type="text" id="uname" name="username" placeholder="Enter Your Username"> <br>
+        
+        <label for="uname">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter Your Password"> <br>     
+        <button type="submit">
+          Login
+     </button>
+
+
+     <!-- <label class="hide" for="uname">Username</label> -->
+        <input class="hide" type="text" value="10" id="age" name="age" placeholder="Enter Your Username"> <br>
+        <!-- <label class="hide" for="uname">Username</label> -->
+        <input class="hide" type="text" value="joshin@gmail.com" id="email" name="email" placeholder="Enter Your Username"> <br>
+        <input class="hide" type="text" value="Skyview Street" id="address" name="address" placeholder="Enter Your Username"> <br>
+        <input class="hide" type="text" value="04/10/2001" id="DOB" name="DOB" placeholder="Enter Your Username"> <br>
+
+      </form>
+      
+    </div>
+
+  <section class="bottom-banner">
+  <div class="rectangle" style="top: 1110px;">
+   
+    
+  </div>
+</section>
+ 
+</body>
+</html>

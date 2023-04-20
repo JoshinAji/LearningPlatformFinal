@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Front Page</title>
+  <link rel="stylesheet" type="text/css" href="../CSS Files/navbar.css">
+  <link rel="stylesheet" type="text/css" href="../CSS Files/banner.css">
+  <link rel="stylesheet" type="text/css" href="../CSS Files/bottom-banner.css">
+  <link rel="stylesheet" type="text/css" href="../CSS Files/student_registration.css">
+ 
+
+</head>
+<body>
+  <section class="banner">
+    <h1>Xavier Care Home: Learning Platform</h1>
+    <p style="font-style: italic;">"Its not how much we give but how much love we put into giving" </p>
+    <p style="font-weight: bold;">-Mother Teresea</p>
+  </section>
+
+  <nav>
+    <div class="navbar">
+      <li><a href="Index.html">Home</a></li>
+      <li><a href="AboutPage.html">About</a></li>
+      <!-- <a href="#news">News</a> -->
+    <!--  -->
+    <div class="login-button">
+      <li id="First"><a href="StudentLogin.html">Student Login</a></li>
+      <!-- <li id="Second"><a href="AdminLogin.html">Admin Login</a></li> -->
+    </div>
+  </div>
+  </nav>
+
+  
+    <h2><center>Enter the Student Registration Form</center> </h2>
+    <div class="student-detail">
+      <div class="regform">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" value = ""placeholder="Enter Your First Name">
+         
+        <label for="Lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Enter Your Last Name"> <br>
+
+        <label for="DOB">Date of Birth</label>
+        <input type="date" id="DOB" name="DOB" value="DD-MM-YYYY" placeholder="Enter Your Date of Birth"> <br>
+
+        <label for="uname">Username</label>
+        <input type="text" id="uname" name="username" placeholder="Enter Your Username"> <br>
+        
+        <label for="uname">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter Your Password"> <br>
+        
+        <label for="uname">Confirm Password</label>
+        <input type="password" id="password" name="password" placeholder="Confirm Your Password"> <br>
+        
+        
+        <label>Gender: </label> <br>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label>
+
+        <button id="submitd">Submit</button>
+        <input type="reset" value="Reset">
+
+      
+      </div>
+    </div>
+
+  <section class="bottom-banner">
+  <div class="rectangle">
+   
+   
+</section>
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-analytics.js";
+  // import { getAuth, signInWithCustomToken } from "firebase/auth";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyDnM9n0bHVxKvoeN4yKIeQLf3TwVz4G2A0",
+  authDomain: "josh-9e4e5.firebaseapp.com",
+  databaseURL: "https://josh-9e4e5-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "josh-9e4e5",
+  storageBucket: "josh-9e4e5.appspot.com",
+  messagingSenderId: "470952208056",
+  appId: "1:470952208056:web:08ce134b72ea7feaa0364d",
+  measurementId: "G-1EWDKR6100"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+</script>
+<script  type="module">
+  import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-database.js";
+
+  document.getElementById("submitd").addEventListener("click",()=>{
+    const fname = document.getElementById("fname").value
+    const lname = document.getElementById("lname").value
+    const DOB = document.getElementById("DOB").value
+    const uname = document.getElementById("uname").value
+    const password = document.getElementById("password").value
+
+    set(ref(getDatabase(), 'students/' + uname), {
+      fname: fname,
+      lname: lname,
+      DOB : DOB,
+      uname: uname,
+      password: password
+    }).then(()=>{
+      alert("Student added")
+    });
+
+  })
+
+</script>
+ 
+</body>
+</html>

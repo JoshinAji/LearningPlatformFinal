@@ -1,0 +1,43 @@
+.addition-numbers p{
+    margin-left: 250px;
+   margin-top: 100px;
+  }
+  .addition-numbers {
+   margin-left: 70px;
+   margin-top: -10px;
+  }
+  .addition-numbers input[type="text"] {
+  width: 100px;
+  height: 30px;
+}
+
+.addition-numbers input[type="button"] {
+  width: 100px;
+  height: 30px;
+  background-color: cyan;
+}
+
+.addition-numbers input[type="button"]:hover {
+  width: 100px;
+  height: 30px;
+  color: white;
+  background-color: darkblue;
+}
+
+
+.middle-row{
+margin-left: 400px;
+margin-top: -565px;
+}
+
+.top-right-row{
+margin-left: 900px;
+margin-top: -570px;
+}
+
+.right-row{
+margin-left: 1400px;
+margin-top: -570px;
+}
+
+
